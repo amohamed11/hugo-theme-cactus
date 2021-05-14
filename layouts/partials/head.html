@@ -36,4 +36,7 @@
     {{ template "_internal/google_analytics.html" . }}
   {{ end }}
   {{ end }}
+  {{ if (isset .Site.Params "netlify") }}
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  {{ end }}
 </head>
